@@ -9,11 +9,10 @@ class TestBot:
     def readSiteData(self):
         driver = webdriver.Chrome()
         driver.get("http://www.python.org")
-        gettingStartedEl = driver.find_element_by_xpath(self.xPath)
-        gettingStartedEl.getText()
-        gettingStarted = gettingStartedEl.getText()
+        getting_started_el = driver.find_element_by_xpath(self.xPath)
+        getting_started = getting_started_el.text
         driver.close()
-        return gettingStarted
+        return getting_started
 
 
 
