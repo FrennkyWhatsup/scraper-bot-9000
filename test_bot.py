@@ -1,5 +1,5 @@
 from scraper_lib import PageReader
-from site_data import PageData
+from site_data import EventData
 
 
 class TestBot:
@@ -18,7 +18,7 @@ class TestBot:
     get_started_description = '//*[@id="content"]/div/section/div[1]/div[1]/p[1]'
     url = "http://www.python.org"
 
-    def read_page_data(self) -> PageData:
+    def read_page_data(self) -> EventData:
         #                   '-> PageData' lets whoever uses this method know what it returns
         #                            (functions on a class are called methods)
         with PageReader(self.url) as pythonHomePage:
@@ -27,4 +27,4 @@ class TestBot:
 
             title = pythonHomePage.get_element(self.get_started_title).text
             description = pythonHomePage.get_element(self.get_started_description).text
-            return PageData(title, self.url, description)
+            return EventData(title, self.url, description)

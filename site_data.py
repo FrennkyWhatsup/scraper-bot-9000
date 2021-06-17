@@ -1,4 +1,4 @@
-class PageData:
+class EventData:
     # adding this is not required, but allows us to see hints when using autocomplete on "PageData('','')."
     # the shortcut for autocomplete is usually "ctrl+space"
     address: str
