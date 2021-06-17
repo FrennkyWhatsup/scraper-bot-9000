@@ -24,3 +24,17 @@ class PageData:
         self.description = description
         self.url = url
         self.address = address
+
+    # this is called when you do str(somePageDataObject) and returns a string
+    # also, when you do print(someObject), print(str(someObject)) is actually called
+    def __str__(self):
+        return self.__repr__()
+
+    # almost the same above, for the difference, read this https://www.geeksforgeeks.org/str-vs-repr-in-python/
+    def __repr__(self):
+        return repr({
+            'title': self.title,
+            'description': self.description,
+            'url': self.url,
+            'address': self.address,
+        })
