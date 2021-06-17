@@ -27,4 +27,4 @@ class TestBot:
 
             title = pythonHomePage.get_element(self.get_started_title).text
             description = pythonHomePage.get_element(self.get_started_description).text
-            return PageData(title, self.url, description + self.asdasdas())
+            return PageData(title, self.url, description)
