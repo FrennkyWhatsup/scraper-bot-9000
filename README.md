@@ -1,6 +1,6 @@
 # Scraper Bot 9000
 
-asdfg
+Proof of concept, trying to read some data from a web page.
 
 ## Resources
 
