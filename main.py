@@ -2,7 +2,7 @@ from test_bot import TestBot
 
 
 def main():
-    print(TestBot().readSiteData())
+    print(TestBot().read_site_data())
 
 
 if __name__ == "__main__":

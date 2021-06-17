@@ -6,11 +6,10 @@ from selenium.webdriver.remote.webelement import WebElement
 class TestBot:
     xPath = '//*[@id="content"]/div/section/div[1]/div[1]/h2'
 
-    def readSiteData(self):
+    def read_site_data(self):
         driver = webdriver.Chrome()
         driver.get("http://www.python.org")
-        getting_started_el = driver.find_element_by_xpath(self.xPath)
-        getting_started = getting_started_el.text
+        getting_started = driver.find_element_by_xpath(self.xPath).text
         driver.close()
         return getting_started
 
